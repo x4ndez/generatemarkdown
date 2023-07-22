@@ -38,7 +38,9 @@ THEN I am taken to the corresponding section of the README
 To use this application you will need [node.js](https://nodejs.org/en) installed.
 
 ## Application Walkthrough
-![Video walkthrough of application](./assets/walkthrough.gif)
+![Video walkthrough of application](https://drive.google.com/file/d/1s3Kol9xhRSuTMolz6MIRMKd3ep7-Xtgy/view?usp=drive_link)
+
+https://drive.google.com/file/d/1s3Kol9xhRSuTMolz6MIRMKd3ep7-Xtgy/view?usp=drive_link
 ## Usage
 1. Execute 'node index.js' in the './generatemarkdown/' directory.
 2. Type or paste in your information when prompted.
@@ -48,7 +50,7 @@ To use this application you will need [node.js](https://nodejs.org/en) installed
 6. Once the file is in your working directory, rename it to README.md.
 
 ## License
-![License Badge: ${promptResult.license}](https://img.shields.io/badge/License-MIT-blue)<br>
+![License Badge: License](https://img.shields.io/badge/License-MIT-blue)<br>
 This project is covered under the MIT License.
 
 ## Contribution
