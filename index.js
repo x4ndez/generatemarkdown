@@ -3,6 +3,9 @@ const path = require("path");
 const inquirer = require("inquirer-promise");
 const templateReadme = require("./assets/js/templateReadme.js");
 
+// console.log(path.join(".", "/", "output", "*"));
+
+
 const appProcess = async function () {
 
     //Process 1: prompt user for information
@@ -81,13 +84,22 @@ const appProcess = async function () {
         //Put results into the template and return as "processedReadme"
         const processedReadme = templateReadme.template(promptResult);
 
-        fs.writeFile("./output/README.md", processedReadme, function (err) {
+        // fs.readdir(path.join(".", "/", "output", "/"), function (err, files) {
 
-            if (err) throw err;
+        //     if (err) throw err;
+        //     else if (files) console.log(files.length);
 
-        });
+        // });
 
-    };
+        // fs.writeFile(`./output/README${x}.md`, processedReadme, function (err) {
+
+        //     if (err) throw err;
+
+        // });
+
+
+
+    }
 
 }
 
