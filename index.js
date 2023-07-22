@@ -1,8 +1,10 @@
 const fs = require("fs");
 const inquirer = require("inquirer-promise");
-const templateReadme = require("./assets/js/templateReadme").template;
+const templateReadme = require("./assets/js/templateReadme.js");
 
 const appProcess = async function () {
+
+    //Process 1: prompt user for information
 
     const prompt = inquirer
 
@@ -70,18 +72,28 @@ const appProcess = async function () {
 
         ])
 
-    let promptResult = await prompt; //wait for prompt result and store in promptResult
+    let promptResult = await prompt; //wait for prompt results and store in promptResult
 
     //Process 2: when the prompt results are received...
     if (promptResult) {
 
-        
+        //Put results into the template and return as "processedReadme"
+        const processedReadme = templateReadme.template(promptResult);
+
+        //REMOVE: CONSOLE.LOG LATER
+        console.log(processedReadme);
+
+        // fs.writeFile("./output/", templateReadme.template, function (err) {
+
+        //     if (err) throw err;
+
+        // });
 
     };
 
 }
 
-
+appProcess();
 
     //Project name
     //readme: sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
