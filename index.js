@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const inquirer = require("inquirer-promise");
 const templateReadme = require("./assets/js/templateReadme.js");
 
@@ -79,9 +80,6 @@ const appProcess = async function () {
 
         //Put results into the template and return as "processedReadme"
         const processedReadme = templateReadme.template(promptResult);
-
-        //REMOVE: CONSOLE.LOG LATER
-        console.log(processedReadme);
 
         fs.writeFile("./output/README.md", processedReadme, function (err) {
 
