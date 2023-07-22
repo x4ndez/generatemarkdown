@@ -6,8 +6,62 @@ inquirer
 
         {
             type: "input",
-            message: "What is your name?",
-            name: "name",
+            message: "Please provide the title of your project...",
+            name: "projectTitle",
+        },
+
+        {
+            type: "input",
+            message: "Please give a description of your project...",
+            name: "description",
+        },
+
+        {
+            type: "input",
+            message: "Please provide installation instructions...",
+            name: "installation",
+        },
+
+        {
+            type: "input",
+            message: "Please provide usage guidelines...",
+            name: "usage",
+        },
+
+        {
+            type: "input",
+            message: "Please provide contribution guidelines...",
+            name: "contribution",
+        },
+
+        {
+            type: "input",
+            message: "Please provide test instructions...",
+            name: "tests",
+        },
+
+        {
+            type: "list",
+            message: "Please choose a license from the following...",
+            name: "license",
+            choices: [
+                "Option 1",
+                "Option 2",
+                "Option 3",
+                "Option 4"
+            ],
+        },
+
+        {
+            type: "input",
+            message: "Please provide the URL to your GitHub profile...",
+            name: "ghProfileUrl",
+        },
+
+        {
+            type: "input",
+            message: "Please provide the email address that people looking at this readme can contact you on...",
+            name: "email",
         },
 
     ])
