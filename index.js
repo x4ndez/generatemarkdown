@@ -1,7 +1,8 @@
 const fs = require("fs");
 const inquirer = require("inquirer-promise");
+const templateReadme = require("./assets/js/templateReadme").template;
 
-const throwPrompt = async function () {
+const appProcess = async function () {
 
     const prompt = inquirer
 
@@ -69,13 +70,18 @@ const throwPrompt = async function () {
 
         ])
 
-    let promptResult = await prompt;
+    let promptResult = await prompt; //wait for prompt result and store in promptResult
 
-    if (promptResult) console.log(promptResult.email);
+    //Process 2: when the prompt results are received...
+    if (promptResult) {
+
+        
+
+    };
 
 }
 
-throwPrompt();
+
 
     //Project name
     //readme: sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
