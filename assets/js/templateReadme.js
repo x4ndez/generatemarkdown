@@ -1,45 +1,41 @@
 let template = function (promptResult) {
 
-    let templateStr = `
-    
-    # ${promptResult.projectTitle}
+    let templateStr = `# ${promptResult.projectTitle}
 
-    <!-- Please take a screenshot of the deployed application and place it in ./assets/images/ -->
-    ![Screenshot of application](./assets/images/screenshot.png)
+<!-- Please take a screenshot of the deployed application and place it in ./assets/images/ -->
+![Screenshot of application](./assets/images/screenshot.png)
     
-    ## Description
-    ${promptResult.description}
+## Description
+${promptResult.description}
 
-    ## Table of Contents
+## Table of Contents
     
-    1. [Installation](#installation)
-    2. [Usage](#usage)
-    3. [License](#license)
-    4. [Contribution](#contribution)
-    5. [Tests](#tests)
-    6. [Questions](#questions)
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contribution](#contribution)
+5. [Tests](#tests)
+6. [Questions](#questions)
     
-    ## Installation
-    ${promptResult.installation}
+## Installation
+${promptResult.installation}
     
-    ## Usage
-    ${promptResult.usage}
+## Usage
+${promptResult.usage}
     
-    ## License
-    ![License Badge: ${promptResult.license}](https://img.shields.io/badge/License-${promptResult.license}-blue)<br>
-    This project is covered under the ${promptResult.license} License.
+## License
+![License Badge: ${promptResult.license}](https://img.shields.io/badge/License-${promptResult.license}-blue)<br>
+This project is covered under the ${promptResult.license} License.
     
-    ## Contribution
-    ${promptResult.contribution}
+## Contribution
+${promptResult.contribution}
     
-    ## Tests
-    ${promptResult.tests}
+## Tests
+${promptResult.tests}
     
-    ## Questions
-    GitHub Profile: <${promptResult.ghProfileUrl}><br>
-    Any questions can be directed to... <${promptResult.email}>.
-
-    `;
+## Questions
+GitHub Profile: <${promptResult.ghProfileUrl}><br>
+Any questions can be directed to... <${promptResult.email}>.`;
 
     return templateStr;
 
