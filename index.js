@@ -83,11 +83,11 @@ const appProcess = async function () {
         //REMOVE: CONSOLE.LOG LATER
         console.log(processedReadme);
 
-        // fs.writeFile("./output/", templateReadme.template, function (err) {
+        fs.writeFile("./output/README.md", processedReadme, function (err) {
 
-        //     if (err) throw err;
+            if (err) throw err;
 
-        // });
+        });
 
     };
 
