@@ -1,73 +1,81 @@
 const fs = require("fs");
-const inquirer = require("inquirer");
+const inquirer = require("inquirer-promise");
 
-inquirer
-    .prompt([
+const throwPrompt = async function () {
 
-        {
-            type: "input",
-            message: "Please provide the title of your project...",
-            name: "projectTitle",
-        },
+    const prompt = inquirer
 
-        {
-            type: "input",
-            message: "Please give a description of your project...",
-            name: "description",
-        },
+        .prompt([
 
-        {
-            type: "input",
-            message: "Please provide installation instructions...",
-            name: "installation",
-        },
+            {
+                type: "input",
+                message: "Please provide the title of your project...",
+                name: "projectTitle",
+            },
 
-        {
-            type: "input",
-            message: "Please provide usage guidelines...",
-            name: "usage",
-        },
+            {
+                type: "input",
+                message: "Please give a description of your project...",
+                name: "description",
+            },
 
-        {
-            type: "input",
-            message: "Please provide contribution guidelines...",
-            name: "contribution",
-        },
+            {
+                type: "input",
+                message: "Please provide installation instructions...",
+                name: "installation",
+            },
 
-        {
-            type: "input",
-            message: "Please provide test instructions...",
-            name: "tests",
-        },
+            {
+                type: "input",
+                message: "Please provide usage guidelines...",
+                name: "usage",
+            },
 
-        {
-            type: "list",
-            message: "Please choose a license from the following...",
-            name: "license",
-            choices: [
-                "Option 1",
-                "Option 2",
-                "Option 3",
-                "Option 4"
-            ],
-        },
+            {
+                type: "input",
+                message: "Please provide contribution guidelines...",
+                name: "contribution",
+            },
 
-        {
-            type: "input",
-            message: "Please provide the URL to your GitHub profile...",
-            name: "ghProfileUrl",
-        },
+            {
+                type: "input",
+                message: "Please provide test instructions...",
+                name: "tests",
+            },
 
-        {
-            type: "input",
-            message: "Please provide the email address that people looking at this readme can contact you on...",
-            name: "email",
-        },
+            {
+                type: "list",
+                message: "Please choose a license from the following...",
+                name: "license",
+                choices: [
+                    "Option 1",
+                    "Option 2",
+                    "Option 3",
+                    "Option 4"
+                ],
+            },
 
-    ])
+            {
+                type: "input",
+                message: "Please provide the URL to your GitHub profile...",
+                name: "ghProfileUrl",
+            },
 
-    .then();
+            {
+                type: "input",
+                message: "Please provide the email address that people looking at this readme can contact you on...",
+                name: "email",
+            },
 
+        ])
+
+    let promptResult = await prompt;
+
+    if (promptResult) console.log(promptResult.email);
+
+}
+
+throwPrompt();
 
     //Project name
     //readme: sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
