@@ -3,10 +3,6 @@ const path = require("path");
 const inquirer = require("inquirer-promise");
 const templateReadme = require("./assets/js/templateReadme.js");
 
-// console.log(path.join(".", "/", "output", "*"));
-
-const outputDir = path.join(".", "/", "output", "/");
-
 function prompt() {
 
     let inquirerPrompt = inquirer
@@ -81,16 +77,17 @@ function prompt() {
 
 function readDirOutput() {
 
-    let xy = fs.readdirSync();
+    const outputDir = path.join(".", "/", "output", "/");
+
+    let xy = fs.readdirSync(outputDir);
 
     return xy;
 
 }
 
-function createFile(outputDirLen, processedReadme) {
+function createFile(outputDirArrayLen, processedReadme) {
 
-    // const filePath = `./output/README_${outputDirLen}.md`;
-    const filePath = path();
+    const filePath = path.join(".", "/", "output", "/", `README_${outputDirArrayLen}.md`);
 
     fs.writeFile(filePath, processedReadme, function (err) {
 
@@ -98,7 +95,7 @@ function createFile(outputDirLen, processedReadme) {
 
     });
 
-    // return path(filePath.);
+    return path.basename(filePath);
 
 }
 
@@ -108,12 +105,13 @@ async function appProcess() {
     console.log("Prompt results stored.");
 
     const outputDirArray = readDirOutput(); //Store current files in "./output/" to access the length that will parse to the file name when writing.
-    console.log(`Output Files: ${outputDir}, No. of Files: ${outputDir.length}`);
+    console.log(`Output Files: ${outputDirArray}, No. of Files: ${outputDirArray.length}`);
 
     //Put results into the template and return as "processedReadme"
     const processedReadme = templateReadme.template(promptResult);
     console.log("Readme processed.");
 
+    //Creates the readme file and places it in "./output/"
     let fileName = createFile(outputDirArray.length, processedReadme);
     console.log(`Readme created. The file name is: "${fileName}"`);
 
