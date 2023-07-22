@@ -50,10 +50,11 @@ function prompt() {
                 message: "Please choose a license from the following...",
                 name: "license",
                 choices: [
-                    "Option 1",
-                    "Option 2",
-                    "Option 3",
-                    "Option 4"
+                    "MIT",
+                    "GNU AGPLv3",
+                    "GNU LGPLv3",
+                    "Mozilla Public License 2.0",
+                    "Apache License 2.0"
                 ],
             },
 
