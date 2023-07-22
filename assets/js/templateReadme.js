@@ -7,18 +7,17 @@ let template = function (promptResult) {
     <!-- Please take  screenshot of the deployed application and place it in ./assets/ -->
     ![Screenshot of application](./assets/screenshot.png)
     
-    ## Table of Contents
-    
-    1. [Description](#description)
-    2. [Installation](#installation)
-    3. [Usage](#usage)
-    4. [License](#license)
-    5. [Contribution](#contribution)
-    6. [Tests](#tests)
-    6. [Questions](#questions)
-    
     ## Description
     ${promptResult.description}
+
+    ## Table of Contents
+    
+    1. [Installation](#installation)
+    2. [Usage](#usage)
+    3. [License](#license)
+    4. [Contribution](#contribution)
+    5. [Tests](#tests)
+    6. [Questions](#questions)
     
     ## Installation
     ${promptResult.installation}
@@ -27,6 +26,8 @@ let template = function (promptResult) {
     ${promptResult.usage}
     
     ## License
+    ![License Badge: ${promptResult.license}](https://img.shields.io/badge/License-${promptResult.license}-blue)
+    This project is covered under the ${promptResult.license} License.
     
     ## Contribution
     ${promptResult.contribution}
