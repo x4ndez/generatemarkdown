@@ -5,6 +5,7 @@ const templateReadme = require("./assets/js/templateReadme.js");
 
 // console.log(path.join(".", "/", "output", "*"));
 
+const outputDir = path.join(".", "/", "output", "/");
 
 function prompt() {
 
@@ -80,7 +81,7 @@ function prompt() {
 
 function readDirOutput() {
 
-    let xy = fs.readdirSync(path.join(".", "/", "output", "/"));
+    let xy = fs.readdirSync();
 
     return xy;
 
@@ -88,7 +89,8 @@ function readDirOutput() {
 
 function createFile(outputDirLen, processedReadme) {
 
-    const filePath = `./output/README_${outputDirLen}.md`;
+    // const filePath = `./output/README_${outputDirLen}.md`;
+    const filePath = path();
 
     fs.writeFile(filePath, processedReadme, function (err) {
 
@@ -105,14 +107,14 @@ async function appProcess() {
     const promptResult = await prompt(); //Prompt user for information, wait for prompt results and store in promptResult
     console.log("Prompt results stored.");
 
-    const outputDir = readDirOutput(); //Store current files in "./output/" to access the length that will parse to the file name when writing.
+    const outputDirArray = readDirOutput(); //Store current files in "./output/" to access the length that will parse to the file name when writing.
     console.log(`Output Files: ${outputDir}, No. of Files: ${outputDir.length}`);
 
     //Put results into the template and return as "processedReadme"
     const processedReadme = templateReadme.template(promptResult);
     console.log("Readme processed.");
 
-    let fileName = createFile(outputDir.length, processedReadme);
+    let fileName = createFile(outputDirArray.length, processedReadme);
     console.log(`Readme created. The file name is: "${fileName}"`);
 
 
