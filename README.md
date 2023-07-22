@@ -1,7 +1,6 @@
 # README Generator
 
-<!-- Please take screenshot of the deployed application and place it in './assets/images/' -->
-![Screenshot of application](./assets/screenshot.png)
+![Screenshot of application](./assets/images/screenshot.png)
 
 ## Description
 This application is the week 9 project of the edX/Monash bootcamp. The focus of this week is node.js; I used the inquirer-promise module to form the prompt to collect user input, the file system module, path module and made my own module that contains the readme template.  I found most of this project on the easy side, but then I thought I understood promises with async and await... I didn't understand it. It took me hours upon hours trying to understand it, messing with different variations.  Moods changed from "I'll just try this", then reverting commits, try again, staring at my screen, back to square one... and then I finally gave in to watching a Youtube video, and I understood it within 10 minutes.  And that is the story of how I have beautiful clean async/await and function structure in my index.js!  Thanks Youtube!  If I was to redo this project, something I would have liked to do is: instead of a template readme, have them segmented into their sections so that I could omit the section by not adding that string to the processed template.  It would also be nice to add a feature where the user could add their own section via the command prompt.
@@ -54,7 +53,3 @@ This project is covered under the MIT License.
 
 ## Contribution
 x4ndez: <https://github.com/x4ndez>
-
-## Questions
-GitHub Profile: <https://github.com/x4ndez><br>
-
