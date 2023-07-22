@@ -79,23 +79,25 @@ function readDirOutput() {
 
     const outputDir = path.join(".", "/", "output", "/");
 
-    let xy = fs.readdirSync(outputDir);
+    let readDir = fs.readdirSync(outputDir);
 
-    return xy;
+    return readDir;
 
 }
 
 function createFile(outputDirArrayLen, processedReadme) {
 
+    //the file path to be written to
     const filePath = path.join(".", "/", "output", "/", `README_${outputDirArrayLen}.md`);
 
+    //write the file
     fs.writeFile(filePath, processedReadme, function (err) {
 
         if (err) throw err;
 
     });
 
-    return path.basename(filePath);
+    return path.basename(filePath); //return basename of the file
 
 }
 
