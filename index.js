@@ -3,6 +3,9 @@ const path = require("path");
 const inquirer = require("inquirer-promise");
 const templateReadme = require("./assets/js/templateReadme.js");
 
+console.log(`\x1b[35mWelcome to the Markdown Generator, here we will take care of all your markdown generating needs such as generating a HIGH QUALITY README. 
+You won't be disappointed... but if you are, this application is free, so we won't be giving you your money back. Enjoy! :)\x1b[0m`);
+
 function prompt() {
 
     let inquirerPrompt = inquirer
@@ -11,62 +14,63 @@ function prompt() {
 
             {
                 type: "input",
-                message: "Please provide the title of your project...",
+                message: "\x1b[4mPlease provide the title of your project...\x1b[0m",
                 name: "projectTitle",
             },
 
             {
                 type: "input",
-                message: "Please give a description of your project...",
+                message: "\x1b[4mPlease provide a description of your project...\x1b[0m",
                 name: "description",
             },
 
             {
                 type: "input",
-                message: "Please provide installation instructions...",
+                message: "\x1b[4mPlease provide installation instructions...\x1b[0m",
                 name: "installation",
             },
 
             {
                 type: "input",
-                message: "Please provide usage guidelines...",
+                message: "\x1b[4mPlease provide usage guidelines...\x1b[0m",
                 name: "usage",
             },
 
             {
                 type: "input",
-                message: "Please provide contribution guidelines...",
+                message: "\x1b[4mPlease provide contribution guidelines...\x1b[0m",
                 name: "contribution",
             },
 
             {
                 type: "input",
-                message: "Please provide test instructions...",
+                message: "\x1b[4mPlease provide test instructions...\x1b[0m",
                 name: "tests",
             },
 
             {
                 type: "list",
-                message: "Please choose a license from the following...",
+                message: "\x1b[4mPlease choose a license from the following...\x1b[0m",
                 name: "license",
                 choices: [
                     "MIT",
-                    "GNU AGPLv3",
-                    "GNU LGPLv3",
-                    "Mozilla Public License 2.0",
-                    "Apache License 2.0"
+                    "GNUAGPLv3",
+                    "GNULGPLv3",
+                    "MozillaPublicLicense2.0",
+                    "ApacheLicense2.0",
+                    "Unlicensed"
                 ],
             },
 
             {
                 type: "input",
-                message: "Please provide the URL to your GitHub profile...",
+                message: "\x1b[4mPlease provide the URL to your GitHub profile...\x1b[0m",
                 name: "ghProfileUrl",
             },
 
             {
                 type: "input",
-                message: "Please provide the email address that people looking at this readme can contact you on...",
+                message: "\x1b[4mPlease provide the email address that people looking at this readme can contact you on...\x1b[0m",
                 name: "email",
             },
 
@@ -117,8 +121,8 @@ async function appProcess() {
     console.log("Readme processed.");
 
     //Creates the readme file and places it in "./output/"
-    let fileName = createFile(outputDirArray.length, processedReadme);
-    console.log(`Readme created. The file name is: "${fileName}"`);
+    let fileName = creaclearteFile(outputDirArray.length, processedReadme);
+    console.log(`\x1b[35mReadme created. The file name is: "${fileName}"\x1b[0m`);
 
 }
 

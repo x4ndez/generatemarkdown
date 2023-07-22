@@ -57,5 +57,4 @@ x4ndez: <https://github.com/x4ndez>
 
 ## Questions
 GitHub Profile: <https://github.com/x4ndez><br>
-Any questions can be directed to <ananfro@live.com>.
 
