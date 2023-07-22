@@ -6,11 +6,9 @@ const templateReadme = require("./assets/js/templateReadme.js");
 // console.log(path.join(".", "/", "output", "*"));
 
 
-const appProcess = async function () {
+function prompt() {
 
-    //Process 1: prompt user for information
-
-    const prompt = inquirer
+    let inquirerPrompt = inquirer
 
         .prompt([
 
@@ -76,30 +74,47 @@ const appProcess = async function () {
 
         ])
 
-    let promptResult = await prompt; //wait for prompt results and store in promptResult
+    return inquirerPrompt;
 
-    //Process 2: when the prompt results are received...
-    if (promptResult) {
+}
 
-        //Put results into the template and return as "processedReadme"
-        const processedReadme = templateReadme.template(promptResult);
+function readDirOutput() {
 
-        // fs.readdir(path.join(".", "/", "output", "/"), function (err, files) {
+    let xy = fs.readdirSync(path.join(".", "/", "output", "/"));
 
-        //     if (err) throw err;
-        //     else if (files) console.log(files.length);
+    return xy;
 
-        // });
+}
 
-        // fs.writeFile(`./output/README${x}.md`, processedReadme, function (err) {
+function createFile(outputDirLen, processedReadme) {
 
-        //     if (err) throw err;
+    const filePath = `./output/README_${outputDirLen}.md`;
 
-        // });
+    fs.writeFile(filePath, processedReadme, function (err) {
 
+        if (err) throw err;
 
+    });
 
-    }
+    // return path(filePath.);
+
+}
+
+async function appProcess() {
+
+    const promptResult = await prompt(); //Prompt user for information, wait for prompt results and store in promptResult
+    console.log("Prompt results stored.");
+
+    const outputDir = readDirOutput(); //Store current files in "./output/" to access the length that will parse to the file name when writing.
+    console.log(`Output Files: ${outputDir}, No. of Files: ${outputDir.length}`);
+
+    //Put results into the template and return as "processedReadme"
+    const processedReadme = templateReadme.template(promptResult);
+    console.log("Readme processed.");
+
+    let fileName = createFile(outputDir.length, processedReadme);
+    console.log(`Readme created. The file name is: "${fileName}"`);
+
 
 }
 
