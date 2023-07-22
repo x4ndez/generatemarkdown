@@ -121,7 +121,7 @@ async function appProcess() {
     console.log("Readme processed.");
 
     //Creates the readme file and places it in "./output/"
-    let fileName = creaclearteFile(outputDirArray.length, processedReadme);
+    let fileName = createFile(outputDirArray.length, processedReadme);
     console.log(`\x1b[35mReadme created. The file name is: "${fileName}"\x1b[0m`);
 
 }
