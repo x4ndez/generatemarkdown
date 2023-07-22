@@ -4,8 +4,8 @@ let template = function (promptResult) {
     
     # ${promptResult.projectTitle}
 
-    <!-- Please take  screenshot of the deployed application and place it in ./assets/ -->
-    ![Screenshot of application](./assets/screenshot.png)
+    <!-- Please take a screenshot of the deployed application and place it in ./assets/images/ -->
+    ![Screenshot of application](./assets/images/screenshot.png)
     
     ## Description
     ${promptResult.description}
@@ -26,7 +26,7 @@ let template = function (promptResult) {
     ${promptResult.usage}
     
     ## License
-    ![License Badge: ${promptResult.license}](https://img.shields.io/badge/License-${promptResult.license}-blue)
+    ![License Badge: ${promptResult.license}](https://img.shields.io/badge/License-${promptResult.license}-blue)<br>
     This project is covered under the ${promptResult.license} License.
     
     ## Contribution
@@ -36,7 +36,7 @@ let template = function (promptResult) {
     ${promptResult.tests}
     
     ## Questions
-    GitHub Profile: <${promptResult.ghProfileUrl}>
+    GitHub Profile: <${promptResult.ghProfileUrl}><br>
     Any questions can be directed to... <${promptResult.email}>.
 
     `;

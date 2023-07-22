@@ -104,10 +104,12 @@ function createFile(outputDirArrayLen, processedReadme) {
 
 async function appProcess() {
 
-    const promptResult = await prompt(); //Prompt user for information, wait for prompt results and store in promptResult
+    //Prompt user for information, wait for prompt results and store in promptResult
+    const promptResult = await prompt();
     console.log("Prompt results stored.");
 
-    const outputDirArray = readDirOutput(); //Store current files in "./output/" to access the length that will parse to the file name when writing.
+    //Store current files in "./output/" to access the length that will parse to the file name when writing.
+    const outputDirArray = readDirOutput();
     console.log(`Output Files: ${outputDirArray}, No. of Files: ${outputDirArray.length}`);
 
     //Put results into the template and return as "processedReadme"

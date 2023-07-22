@@ -1,10 +1,10 @@
-# ${response.projectTitle}
+# README Generator
 
-<!-- Please take  screenshot of the deployed application and place it in ./assets/ -->
+<!-- Please take screenshot of the deployed application and place it in './assets/images/' -->
 ![Screenshot of application](./assets/screenshot.png)
 
 ## Description
-This application is the week 9 project of the edX/Monash bootcamp. The focus of this week is node.js; I used the inquirer-promise module to form the prompt to collect user input, the file system module, path module and made my own module that contains the readme template.  I found most of this project on the easy side, but then I thought I understood promises with async and await... I didn't understand it. It took me hours upon hours trying to understand it, messing with different variations.  Moods changed from "I'll just try this", then reverting commits, try again, staring at my screen, back to square one... and then I finally gave in to watching a Youtube video, and I understood it within 10 minutes.  And that is the story of how I have beautiful clean async/await and function structure in my index.js!  Thanks Youtube!
+This application is the week 9 project of the edX/Monash bootcamp. The focus of this week is node.js; I used the inquirer-promise module to form the prompt to collect user input, the file system module, path module and made my own module that contains the readme template.  I found most of this project on the easy side, but then I thought I understood promises with async and await... I didn't understand it. It took me hours upon hours trying to understand it, messing with different variations.  Moods changed from "I'll just try this", then reverting commits, try again, staring at my screen, back to square one... and then I finally gave in to watching a Youtube video, and I understood it within 10 minutes.  And that is the story of how I have beautiful clean async/await and function structure in my index.js!  Thanks Youtube!  If I was to redo this project, something I would have liked to do is: instead of a template readme, have them segmented into their sections so that I could omit the section by not adding that string to the processed template.  It would also be nice to add a feature where the user could add their own section via the command prompt.
 
 The acceptance criteria of this project were as follows:
 
@@ -41,7 +41,12 @@ To use this application you will need [node.js](https://nodejs.org/en) installed
 ## Application Walkthrough
 ![Video walkthrough of application](./assets/walkthrough.gif)
 ## Usage
-
+1. Execute 'node index.js' in the './generatemarkdown/' directory.
+2. Type or paste in your information when prompted.
+3. When "Readme created" is output to the terminal, with the file name specified, the readme file will be placed into the './output/' directory.
+4. Take a screenshot of your deployed application and place it in './assets/screenshot.png'.
+5. Make specific changes as needed.
+6. Once the file is in your working directory, rename it to README.md.
 
 ## License
 ![License Badge: ${promptResult.license}](https://img.shields.io/badge/License-MIT-blue)<br>
