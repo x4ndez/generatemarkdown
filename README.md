@@ -44,15 +44,13 @@ To use this application you will need [node.js](https://nodejs.org/en) installed
 
 
 ## License
+![License Badge: ${promptResult.license}](https://img.shields.io/badge/License-MIT-blue)<br>
 This project is covered under the MIT License.
 
 ## Contribution
 x4ndez: <https://github.com/x4ndez>
 
-## Tests
-
-
 ## Questions
-GitHub Profile: <https://github.com/x4ndez>
+GitHub Profile: <https://github.com/x4ndez><br>
 Any questions can be directed to <ananfro@live.com>.
 
