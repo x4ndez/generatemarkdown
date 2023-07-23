@@ -38,7 +38,11 @@ THEN I am taken to the corresponding section of the README
 To use this application you will need [node.js](https://nodejs.org/en) installed.
 
 ## Application Walkthrough
-Please click [here](https://drive.google.com/file/d/1s3Kol9xhRSuTMolz6MIRMKd3ep7-Xtgy/view?usp=drive_link) to see the video walkthrough of README Generator.
+Please click [here](https://drive.google.com/file/d/1s3Kol9xhRSuTMolz6MIRMKd3ep7-Xtgy/view?usp=drive_link) to see the video walkthrough of README Generator.<br>
+If you are unable to view the link, it can be downloaded from Google Drive at the same link, or can be downloaded from this repository at '/assets/w9nodewalkthrough.webm'. It's not a virus, I swear.
+
+![Evil smile](https://media.giphy.com/media/fcK30LKXjG6Tm/giphy.gif)
+
 ## Usage
 1. Execute 'node index.js' in the './generatemarkdown/' directory.
 2. Type or paste in your information when prompted.
