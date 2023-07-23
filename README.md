@@ -28,10 +28,10 @@ THEN I am taken to the corresponding section of the README
 ## Table of Contents
 
 1. [Installation](#installation)
-2. [Usage](#usage)
-3. [License](#license)
-4. [Contribution](#contribution)
-5. [Tests](#tests)
+2. [Application Walkthrough](#application-walkthrough)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contribution](#contribution)
 6. [Questions](#questions)
 
 ## Installation
@@ -57,3 +57,6 @@ This project is covered under the MIT License.
 
 ## Contribution
 x4ndez: <https://github.com/x4ndez>
+
+## Questions
+Questions may be directed to my LinkedIn: <https://www.linkedin.com/in/alexandernanfro/>.
